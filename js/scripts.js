@@ -1,5 +1,6 @@
-function Ticket(movieName, time, age, quantity) {
-  this.movieName = movieName;
+// Business Logic
+function Ticket(movieName, time, age, quantity) {  // parameters
+  this.movieName = movieName;  // properties
   this.time = time;
   this.age = age;
   this.quantity = quantity;
@@ -14,7 +15,7 @@ Ticket.prototype.price = function() {
       return setTicketPrice * this.quantity;
     }
 }
-//
+
 // Ticket.prototype.movieYears = function() {
 //   var starWars = { name: "Star Wars", year: 1979 };
 //   var superman = { name: "Superman", year: 2001 };
@@ -27,20 +28,21 @@ Ticket.prototype.price = function() {
 //         return movieYear;
 //   });
 // }
-//
-// $(function() {
-//   $("#buyButton").click(function(event) {
-//     event.preventDefault();
-//     var age = parseInt($("input#age").val());
-//     var movies = $('select#movieTitles').val();
-//     var time = $('select#time').val();
-//     var quantity = parseInt($('input#quantity').val());
-//     var newTicket = new Ticket (movies,time,age,quantity);
-//     $('#ticketInfo').empty();
-//     $('#ticketPrice').empty();
-//     $("#ticketInfo").append("<li>Your age: " + age + "</li>" + "<li>Movie Title: " + movies + "</li>" + "<li>Time: " + time + "</li>");
-//
-//     $("#ticketPrice").append("<li>$" + newTicket.price() + ".00</li>");
-//
-//   });
-// });
+
+// User Interface Logic
+$(function() {
+  $("#buyButton").click(function(event) {
+    event.preventDefault();
+    var age = parseInt($("input#age").val());
+    var movies = $('select#movieTitles').val();
+    var time = $('select#time').val();
+    var quantity = parseInt($('input#quantity').val());
+    var newTicket = new Ticket (movies,time,age,quantity);
+    $('#ticketInfo').empty();
+    $('#ticketPrice').empty();
+    $("#ticketInfo").append("<li>Your age: " + age + "</li>" + "<li>Movie Title: " + movies + "</li>" + "<li>Time: " + time + "</li>");
+
+    $("#ticketPrice").append("<li>$" + newTicket.price() + ".00</li>");
+
+  });
+});
