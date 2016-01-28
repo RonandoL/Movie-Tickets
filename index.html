@@ -10,6 +10,7 @@
   <body>
     <div class="container">
       <div class="form-group">
+
         <label for="movieTitles">Select a Movie:</label>
         <select class="form-control" id="movieTitles">
           <option>Trainspotting</option>
@@ -17,7 +18,8 @@
           <option>12 Angry Men</option>
         </select>
       </div>
-      <div id="timePicker">
+
+      <div id="timePicker" class="form-group">
         <label class="dropdown">Time</label>
           <select id="time">
             <option>1:00</option>
@@ -32,15 +34,18 @@
             <option>10:00</option>
             <option>11:00</option>
           </select>
+
           <select id="pm" placeholder="PM">
             <option>PM</option>
           </select>
       </div><br>
+
       <form class="form-inline">
         <div class="form-group">
           <label for="age">Enter Your Age:</label><br>
-          <input type="number" class="form-control" id="age">
+          <input type="number" class="form-control" id="age" placeholder="22">
         </div><br>
+
         <form class="form-inline">
           <div class="form-group">
             <label for="quantity">Enter Quantity of Tickets:</label><br>
@@ -49,16 +54,19 @@
 
         <button type="submit" class="btn btn-info" id="buyButton">Buy Ticket</button>
       </form><br>
+
+<!-- Results -->
       <div id="ticketResult">
         <p>Your ticket information is:
           <ul id="ticketInfo">
 
           </ul>
         </p>
-        <p>
-          Price: <ul id="ticketPrice"></ul>
+        <p>Price: <ul id="ticketPrice"></ul>
         </p>
       </div>
-    </div>
+    </div>  <!-- /Container -->
+
+
   </body>
 </html>

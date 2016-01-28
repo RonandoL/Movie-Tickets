@@ -30,14 +30,15 @@ Ticket.prototype.price = function() {
 // }
 
 // User Interface Logic
-$(function() {
+$(document).ready(function() {
   $("#buyButton").click(function(event) {
-    event.preventDefault();
     var age = parseInt($("input#age").val());
     var movies = $('select#movieTitles').val();
     var time = $('select#time').val();
     var quantity = parseInt($('input#quantity').val());
+
     var newTicket = new Ticket (movies,time,age,quantity);
+
     $('#ticketInfo').empty();
     $('#ticketPrice').empty();
     $("#ticketInfo").append("<li>Your age: " + age + "</li>" + "<li>Movie Title: " + movies + "</li>" + "<li>Time: " + time + "</li>");
@@ -48,6 +49,6 @@ $(function() {
 
 
 
-
+    event.preventDefault();
   });
 });
