@@ -2,45 +2,63 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
     <title></title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>    <script src="js/scripts.js" charset="utf-8"></script>
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
-        <h1>Header</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
-      </div>  <!-- /JUMBOTRON -->
+      <div class="form-group">
+        <label for="movieTitles">Select a Movie:</label>
+        <select class="form-control" id="movieTitles">
+          <option>Trainspotting</option>
+          <option>Batman</option>
+          <option>12 Angry Men</option>
+        </select>
+      </div>
+      <div id="timePicker">
+        <label class="dropdown">Time</label>
+          <select id="time">
+            <option>1:00</option>
+            <option>2:00</option>
+            <option>3:00</option>
+            <option>4:00</option>
+            <option>5:00</option>
+            <option>6:00</option>
+            <option>7:00</option>
+            <option>8:00</option>
+            <option>9:00</option>
+            <option>10:00</option>
+            <option>11:00</option>
+          </select>
+          <select id="pm" placeholder="PM">
+            <option>PM</option>
+          </select>
+      </div><br>
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="age">Enter Your Age:</label><br>
+          <input type="number" class="form-control" id="age">
+        </div><br>
+        <form class="form-inline">
+          <div class="form-group">
+            <label for="quantity">Enter Quantity of Tickets:</label><br>
+            <input type="number" class="form-control" id="quantity">
+          </div><br><br>
 
-  <!-- Row: 1 -->
-      <div class="row">
-        <div class="col-sm-12">
+        <button type="submit" class="btn btn-info" id="buyButton">Buy Ticket</button>
+      </form><br>
+      <div id="ticketResult">
+        <p>Your ticket information is:
+          <ul id="ticketInfo">
 
-  <!-- Form -->        
-          <form class="">
-            <div class="form-group">
-              <label for="">Lorem Ipsum Baby!:</label>
-              <input class="hotPuddin" type="text" name="name" value="">
-            </div>
-
-            <div class="form-group">
-              <label for="">Lorem Ipsum Baby!:</label>
-              <input class="hotPuddin" type="text" name="name" value="">
-            </div>
-
-            <button class="btn btn-info" type="submit" name="button">Gimme some sugar baby</button>
-          </form>
-
-        </div>  <!-- /col-sm-12 -->
-      </div>  <!-- /Row -->
-
-    </div>  <!-- /Container -->
-
+          </ul>
+        </p>
+        <p>
+          Price: <ul id="ticketPrice"></ul>
+        </p>
+      </div>
+    </div>
   </body>
 </html>

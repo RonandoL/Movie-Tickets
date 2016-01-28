@@ -44,5 +44,10 @@ $(function() {
 
     $("#ticketPrice").append("<li>$" + newTicket.price() + ".00</li>");
 
+
+
+
+
+
   });
 });
