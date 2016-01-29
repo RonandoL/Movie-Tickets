@@ -26,4 +26,5 @@ describe("Ticket",function(){
     var testTicket = new Ticket("12 Angry Men", "5:00", 34, 2)
     expect(testTicket.price()).to.equal(16);
   });
+
 });

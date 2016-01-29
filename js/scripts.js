@@ -1,4 +1,5 @@
 // Business Logic
+// Constructor
 function Ticket(movieName, time, age, quantity) {  // parameters
   this.movieName = movieName;  // properties
   this.time = time;
@@ -7,8 +8,9 @@ function Ticket(movieName, time, age, quantity) {  // parameters
   // this.movieYear = movieYear;
 }
 
-Ticket.prototype.price = function() {
+Ticket.prototype.price = function() {   // prototype
     var setTicketPrice = 10;
+
     if (this.time < "6:00" || this.age >= 65 || this.titlee === "12 Angry Men") {
       return (setTicketPrice * 0.8 * this.quantity);
     } else {
@@ -44,10 +46,6 @@ $(document).ready(function() {
     $("#ticketInfo").append("<li>Your age: " + age + "</li>" + "<li>Movie Title: " + movies + "</li>" + "<li>Time: " + time + "</li>");
 
     $("#ticketPrice").append("<li>$" + newTicket.price() + ".00</li>");
-
-
-
-
 
     event.preventDefault();
   });
